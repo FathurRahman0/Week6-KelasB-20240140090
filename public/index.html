@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etalase – Tokonique</title>
+  <meta name="description" content="Tokonique, belanja produk pilihan dengan harga yang jelas.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230e7c86%22/><text x=%2250%22 y=%2266%22 font-size=%2248%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>TN</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">TN</span>
+      <span class="brand-name">Tokonique</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="index.html" aria-current="page">Etalase</a>
+      <a href="form.html">Pemesanan</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Etalase produk</h2>
+    <p class="intro">Pilih produk yang kamu suka, lalu pesan langsung dalam beberapa langkah.</p>
+
+    <label class="search">
+      <span class="sr-only">Cari produk</span>
+      <input type="search" id="cari" placeholder="Cari produk berdasarkan nama" autocomplete="off">
+    </label>
+
+    <div class="chips" id="kategori" role="group" aria-label="Filter kategori"></div>
+
+    <p id="status-produk" class="status" role="status" aria-live="polite"></p>
+    <button type="button" id="btn-ulang" class="btn btn-ghost" hidden>Coba muat ulang</button>
+    <ul id="daftar-produk" class="product-grid"></ul>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <strong class="footer-brand">Tokonique</strong>
+      <p>Belanja produk pilihan dengan harga yang jelas.</p>
+    </div>
+  </div>
+  <p class="footer-note">© 2026 Tokonique · Sumber data: dummyjson.com</p>
+</footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

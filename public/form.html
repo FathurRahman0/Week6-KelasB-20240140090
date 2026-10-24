@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pemesanan – Tokonique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">PN</span>
+      <span class="brand-name">Tokonique</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="index.html">Etalase</a>
+      <a href="form.html" aria-current="page">Pemesanan</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Form pemesanan</h2>
+
+    <p id="status-produk" class="status" role="status" aria-live="polite"></p>
+    <button type="button" id="btn-ulang" class="btn btn-ghost" hidden>Coba muat ulang</button>
+    <a id="link-etalase" class="btn btn-ghost" href="index.html" hidden>Pilih produk di Etalase</a>
+
+    <div class="order-layout" id="area-pesan" hidden>
+      <form id="form-pesan" novalidate>
+        <fieldset>
+          <legend>Data pemesan</legend>
+
+          <div class="field">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" autocomplete="name">
+            <small class="error" id="err-nama" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="telepon">No. HP / WhatsApp</label>
+            <input type="tel" id="telepon" name="telepon" placeholder="081234567890" autocomplete="tel">
+            <small class="error" id="err-telepon" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="alamat">Alamat pengiriman</label>
+            <textarea id="alamat" name="alamat" rows="3" autocomplete="street-address"></textarea>
+            <small class="error" id="err-alamat" role="alert"></small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pesanan</legend>
+
+         <div class="field">
+            <label for="jumlah">Jumlah</label>
+            <div class="stepper">
+                <button type="button" class="step-btn" id="kurang" aria-label="Kurangi jumlah">−</button>
+                <input type="number" id="jumlah" name="jumlah" value="1" min="1" inputmode="numeric" aria-describedby="err-jumlah">
+                <button type="button" class="step-btn" id="tambah" aria-label="Tambah jumlah">+</button>
+            </div>
+            <small class="error" id="err-jumlah" role="alert"></small>
+            </div>
+
+          <div class="radio-group">
+            <label class="radio">
+              <input type="radio" name="kurir" value="reguler" checked>
+              <span><strong>Reguler</strong> (2–4 hari) – Rp 15.000</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="kurir" value="express">
+              <span><strong>Express</strong> (1 hari) – Rp 30.000</span>
+            </label>
+          </div>
+
+          <div class="field">
+            <label for="catatan">Catatan untuk penjual (opsional)</label>
+            <textarea id="catatan" name="catatan" rows="2" maxlength="100"></textarea>
+            <small class="counter" id="hitung-catatan">0 / 100 karakter</small>
+          </div>
+        </fieldset>
+
+        <div class="field check">
+          <input type="checkbox" id="setuju" name="setuju">
+          <label for="setuju">Data dan pesanan sudah benar</label>
+          <small class="error" id="err-setuju" role="alert"></small>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-lg">Buat pesanan</button>
+          <button type="reset" class="btn btn-ghost">Kosongkan form</button>
+        </div>
+      </form>
+
+      <aside class="summary" aria-live="polite">
+        <div id="produk-dipilih"></div>
+        <div id="ringkasan"></div>
+      </aside>
+    </div>
+
+    <section id="konfirmasi" class="confirm" aria-live="polite" hidden></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Tokonique · Tugas *Week 6 Pemrograman Web</p>
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 // ===== Halaman Etalase: Fetch API =====
 const API_URL = "https://dummyjson.com/products?limit=100";
-const KURS = 16000; // kurs contoh: 1 USD = Rp 16.000
+const KURS = 16000;
 const BATAS_STOK_MENIPIS = 10;
 
 let semuaProduk = [];
